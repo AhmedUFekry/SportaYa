@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BC27A0D984F76D98523BD6D /* Pods_SportaYa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73950699239F085E40B6A07C /* Pods_SportaYa.framework */; };
+		C8422C192BDA5B53004B0C57 /* WalkThroughModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8422C182BDA5B53004B0C57 /* WalkThroughModel.swift */; };
+		C8422C1B2BDA5B79004B0C57 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8422C1A2BDA5B79004B0C57 /* Fixtures.swift */; };
+		C8422C1D2BDA5BA0004B0C57 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8422C1C2BDA5BA0004B0C57 /* Teams.swift */; };
+		C8422C1F2BDA5BC4004B0C57 /* Leagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8422C1E2BDA5BC4004B0C57 /* Leagues.swift */; };
+		C8422C212BDA5BF0004B0C57 /* SportType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8422C202BDA5BF0004B0C57 /* SportType.swift */; };
+		C8422C242BDA5C3B004B0C57 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8422C232BDA5C3B004B0C57 /* NetworkManger.swift */; };
+		C8422C262BDA5CAF004B0C57 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8422C252BDA5CAF004B0C57 /* CoreDataManager.swift */; };
 		C84D04B42BDA4A9100CB01E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D04B32BDA4A9100CB01E8 /* AppDelegate.swift */; };
 		C84D04B62BDA4A9100CB01E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D04B52BDA4A9100CB01E8 /* SceneDelegate.swift */; };
 		C84D04B82BDA4A9100CB01E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D04B72BDA4A9100CB01E8 /* ViewController.swift */; };
@@ -17,6 +25,8 @@
 		C84D04CE2BDA4A9500CB01E8 /* SportaYaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D04CD2BDA4A9500CB01E8 /* SportaYaTests.swift */; };
 		C84D04D82BDA4A9500CB01E8 /* SportaYaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D04D72BDA4A9500CB01E8 /* SportaYaUITests.swift */; };
 		C84D04DA2BDA4A9500CB01E8 /* SportaYaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D04D92BDA4A9500CB01E8 /* SportaYaUITestsLaunchTests.swift */; };
+		C8E0436E2BDACA1C003DCB8E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C8E0436D2BDACA1C003DCB8E /* Alamofire */; };
+		C8E043702BDACA1C003DCB8E /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C8E0436F2BDACA1C003DCB8E /* AlamofireDynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4688C088F0D3775E40238FEF /* Pods-SportaYa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportaYa.debug.xcconfig"; path = "Target Support Files/Pods-SportaYa/Pods-SportaYa.debug.xcconfig"; sourceTree = "<group>"; };
+		73950699239F085E40B6A07C /* Pods_SportaYa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportaYa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92AF96C7DC3B5AACEBE7310D /* Pods-SportaYa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportaYa.release.xcconfig"; path = "Target Support Files/Pods-SportaYa/Pods-SportaYa.release.xcconfig"; sourceTree = "<group>"; };
+		C8422C182BDA5B53004B0C57 /* WalkThroughModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughModel.swift; sourceTree = "<group>"; };
+		C8422C1A2BDA5B79004B0C57 /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
+		C8422C1C2BDA5BA0004B0C57 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		C8422C1E2BDA5BC4004B0C57 /* Leagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leagues.swift; sourceTree = "<group>"; };
+		C8422C202BDA5BF0004B0C57 /* SportType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportType.swift; sourceTree = "<group>"; };
+		C8422C232BDA5C3B004B0C57 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
+		C8422C252BDA5CAF004B0C57 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C84D04B02BDA4A9100CB01E8 /* SportaYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportaYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84D04B32BDA4A9100CB01E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C84D04B52BDA4A9100CB01E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BC27A0D984F76D98523BD6D /* Pods_SportaYa.framework in Frameworks */,
+				C8E043702BDACA1C003DCB8E /* AlamofireDynamic in Frameworks */,
+				C8E0436E2BDACA1C003DCB8E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +101,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EA9CE74E4DE9174F733B100 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73950699239F085E40B6A07C /* Pods_SportaYa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8422C162BDA5B0C004B0C57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8422C172BDA5B18004B0C57 /* DataModels */,
+				C8422C222BDA5C0C004B0C57 /* Services */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C8422C172BDA5B18004B0C57 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				C8422C182BDA5B53004B0C57 /* WalkThroughModel.swift */,
+				C8422C1A2BDA5B79004B0C57 /* Fixtures.swift */,
+				C8422C1C2BDA5BA0004B0C57 /* Teams.swift */,
+				C8422C1E2BDA5BC4004B0C57 /* Leagues.swift */,
+				C8422C202BDA5BF0004B0C57 /* SportType.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		C8422C222BDA5C0C004B0C57 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C8422C232BDA5C3B004B0C57 /* NetworkManger.swift */,
+				C8422C252BDA5CAF004B0C57 /* CoreDataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		C84D04A72BDA4A9100CB01E8 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +146,8 @@
 				C84D04CC2BDA4A9500CB01E8 /* SportaYaTests */,
 				C84D04D62BDA4A9500CB01E8 /* SportaYaUITests */,
 				C84D04B12BDA4A9100CB01E8 /* Products */,
+				E1EB947741C8E35BC471A46B /* Pods */,
+				1EA9CE74E4DE9174F733B100 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +164,7 @@
 		C84D04B22BDA4A9100CB01E8 /* SportaYa */ = {
 			isa = PBXGroup;
 			children = (
+				C8422C162BDA5B0C004B0C57 /* Model */,
 				C84D04B32BDA4A9100CB01E8 /* AppDelegate.swift */,
 				C84D04B52BDA4A9100CB01E8 /* SceneDelegate.swift */,
 				C84D04B72BDA4A9100CB01E8 /* ViewController.swift */,
@@ -130,6 +194,15 @@
 			path = SportaYaUITests;
 			sourceTree = "<group>";
 		};
+		E1EB947741C8E35BC471A46B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4688C088F0D3775E40238FEF /* Pods-SportaYa.debug.xcconfig */,
+				92AF96C7DC3B5AACEBE7310D /* Pods-SportaYa.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,15 +210,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C84D04DD2BDA4A9500CB01E8 /* Build configuration list for PBXNativeTarget "SportaYa" */;
 			buildPhases = (
+				23E35B4FD4A992AE8D18BE98 /* [CP] Check Pods Manifest.lock */,
 				C84D04AC2BDA4A9100CB01E8 /* Sources */,
 				C84D04AD2BDA4A9100CB01E8 /* Frameworks */,
 				C84D04AE2BDA4A9100CB01E8 /* Resources */,
+				9AD5176820F386A70F955C22 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SportaYa;
+			packageProductDependencies = (
+				C8E0436D2BDACA1C003DCB8E /* Alamofire */,
+				C8E0436F2BDACA1C003DCB8E /* AlamofireDynamic */,
+			);
 			productName = SportaYa;
 			productReference = C84D04B02BDA4A9100CB01E8 /* SportaYa.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +297,9 @@
 				Base,
 			);
 			mainGroup = C84D04A72BDA4A9100CB01E8;
+			packageReferences = (
+				C8E0436C2BDACA1C003DCB8E /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = C84D04B12BDA4A9100CB01E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -256,15 +338,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23E35B4FD4A992AE8D18BE98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SportaYa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AD5176820F386A70F955C22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SportaYa/Pods-SportaYa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SportaYa/Pods-SportaYa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SportaYa/Pods-SportaYa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C84D04AC2BDA4A9100CB01E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8422C242BDA5C3B004B0C57 /* NetworkManger.swift in Sources */,
+				C8422C1D2BDA5BA0004B0C57 /* Teams.swift in Sources */,
 				C84D04BE2BDA4A9100CB01E8 /* SportaYa.xcdatamodeld in Sources */,
 				C84D04B82BDA4A9100CB01E8 /* ViewController.swift in Sources */,
+				C8422C212BDA5BF0004B0C57 /* SportType.swift in Sources */,
 				C84D04B42BDA4A9100CB01E8 /* AppDelegate.swift in Sources */,
+				C8422C192BDA5B53004B0C57 /* WalkThroughModel.swift in Sources */,
 				C84D04B62BDA4A9100CB01E8 /* SceneDelegate.swift in Sources */,
+				C8422C1F2BDA5BC4004B0C57 /* Leagues.swift in Sources */,
+				C8422C1B2BDA5B79004B0C57 /* Fixtures.swift in Sources */,
+				C8422C262BDA5CAF004B0C57 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +567,7 @@
 		};
 		C84D04DE2BDA4A9500CB01E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4688C088F0D3775E40238FEF /* Pods-SportaYa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,6 +596,7 @@
 		};
 		C84D04DF2BDA4A9500CB01E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92AF96C7DC3B5AACEBE7310D /* Pods-SportaYa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -606,6 +739,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C8E0436C2BDACA1C003DCB8E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C8E0436D2BDACA1C003DCB8E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8E0436C2BDACA1C003DCB8E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C8E0436F2BDACA1C003DCB8E /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8E0436C2BDACA1C003DCB8E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C84D04BC2BDA4A9100CB01E8 /* SportaYa.xcdatamodeld */ = {
