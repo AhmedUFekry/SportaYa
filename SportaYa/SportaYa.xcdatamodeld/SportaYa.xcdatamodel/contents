@@ -13,6 +13,6 @@
         <attribute name="sportName" optional="YES" attributeType="String"/>
         <attribute name="teamLogo" optional="YES" attributeType="String"/>
         <attribute name="teamName" optional="YES" attributeType="String"/>
-        <relationship name="sportsToPlayer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="playerToSports" inverseEntity="Player"/>
+        <relationship name="sportsToPlayer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Player" inverseName="playerToSports" inverseEntity="Player"/>
     </entity>
 </model>
