@@ -15,5 +15,15 @@ class LeaguesCells: UITableViewCell {
     
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var addLeagueToFavbtn: UIButton!
+    
+    var favLeague:(()->())?
+
+
+    
+    @IBAction func addLeagueToFav(_ sender: Any) {
+        favLeague?()
+    }
+    
 }
 

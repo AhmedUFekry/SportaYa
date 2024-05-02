@@ -237,12 +237,14 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bP1-3N-V2O">
-                                                    <rect key="frame" x="348" y="74" width="52" height="35"/>
+                                                    <rect key="frame" x="349" y="74" width="51" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemRedColor"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="star" catalog="system" title=""/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title=""/>
                                                     <connections>
                                                         <action selector="AddToFavorite:" destination="i61-tW-O2G" eventType="touchUpInside" id="udt-Wg-ivt"/>
+                                                        <action selector="addLeagueToFav:" destination="abe-oF-SpB" eventType="touchUpInside" id="1w2-wZ-9Dg"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -268,6 +270,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <outlet property="addLeagueToFavbtn" destination="bP1-3N-V2O" id="Fa0-FI-D4z"/>
                                             <outlet property="backView" destination="8om-I0-bcf" id="qIr-AA-2w3"/>
                                             <outlet property="imageV" destination="TLj-Yd-2kD" id="WeQ-hq-dbv"/>
                                             <outlet property="label" destination="O09-dz-9wR" id="vt3-xV-ePQ"/>
@@ -304,7 +307,6 @@
                     </view>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="addLeagueToFav" destination="ip4-5K-dsG" id="3Rb-Tp-Fhy"/>
                         <outlet property="imgPlaceHolder" destination="K70-U7-jqk" id="tcD-9y-Vci"/>
                         <outlet property="namesSearchBar" destination="UQH-IE-d18" id="arh-7g-AJ2"/>
                         <outlet property="tableView" destination="ip4-5K-dsG" id="icK-77-DoA"/>
@@ -950,6 +952,7 @@
     </scenes>
     <resources>
         <image name="figure.disc.sports" catalog="system" width="128" height="108"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -959,6 +962,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>

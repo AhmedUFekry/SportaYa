@@ -15,10 +15,12 @@ import Reachability
 class LeaguesVC: UIViewController {
     
     
-    @IBOutlet weak var addLeagueToFav: UITableView!
+ 
     @IBOutlet weak var imgPlaceHolder: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var namesSearchBar: UISearchBar!
+    var coreData = CoreData.coreDataObj
+    var PlayersDetails:[player] = []
     let dummyItems = Items(league_name: "Test", league_key: 0)
     var sport = ""
     var leagues:Leagues?
@@ -120,6 +122,43 @@ extension LeaguesVC: UITableViewDelegate,SkeletonTableViewDataSource{
             cell.imageV.kf.setImage(with: url, placeholder:UIImage(named: "3"))
         default:
             cell.imageV.kf.setImage(with: url, placeholder:UIImage(named: "4"))
+        }
+        // save favourite button state
+        let favLeagues = coreData.fetchTeams()
+        if favLeagues.count == 0 {
+            cell.addLeagueToFavbtn.isSelected = false
+            cell.addLeagueToFavbtn.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
+        for favLeague in favLeagues {
+            if result[indexPath.row].league_key == favLeague.value(forKey: "leagueID") as! Int {
+                cell.addLeagueToFavbtn.isSelected = true
+                cell.addLeagueToFavbtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                break
+            } else {
+                cell.addLeagueToFavbtn.isSelected = false
+                cell.addLeagueToFavbtn.setImage(UIImage(systemName: "heart"), for: .normal)
+            }
+        }
+        //COREDATA NEW
+        cell.favLeague = { [unowned self] in
+            
+            if cell.addLeagueToFavbtn.isSelected == false{
+                cell.addLeagueToFavbtn.isSelected = true
+            }else {
+                cell.addLeagueToFavbtn.isSelected = false
+            }
+            if cell.addLeagueToFavbtn.isSelected {
+                
+                cell.addLeagueToFavbtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                
+                coreData.save(sportName: result[indexPath.row].league_name, leagueID: result[indexPath.row].league_key, teamName: result[indexPath.row].league_name, teamLogo: result[indexPath.row].league_logo ?? "LPlace", players: PlayersDetails)
+                    
+            } else {
+                cell.addLeagueToFavbtn.setImage(UIImage(systemName: "heart"), for: .normal)
+                coreData.del(sportName: result[indexPath.row].league_name, leagueID: result[indexPath.row].league_key, teamName: result[indexPath.row].league_name)
+                
+            }
+            
         }
         
         return cell
