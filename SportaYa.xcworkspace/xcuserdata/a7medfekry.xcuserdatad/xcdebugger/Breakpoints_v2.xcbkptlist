@@ -36,5 +36,117 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B381890-61D6-4630-858E-2ADFDEF64578"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportaYa/ViewControllers/LeaguesVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "fetchLeagues(result:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5DA571E-B149-4059-843C-6CC2F5DEDC92"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportaYa/Presenter/LeaguesPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "fetchLeagues()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C5DA571E-B149-4059-843C-6CC2F5DEDC92 - 69ca3ed53078917f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportaYa.LeaguesPresenter.fetchLeagues() -&gt; ()"
+                  moduleName = "SportaYa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a7medfekry/Desktop/iOS%20Swift/SportaYa/SportaYa/Presenter/LeaguesPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "C5DA571E-B149-4059-843C-6CC2F5DEDC92 - b59da963d7231ae4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;SportaYa.Leagues, Swift.Error&gt;) -&gt; () in SportaYa.LeaguesPresenter.fetchLeagues() -&gt; ()"
+                  moduleName = "SportaYa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a7medfekry/Desktop/iOS%20Swift/SportaYa/SportaYa/Presenter/LeaguesPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "254">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58F65095-E586-4723-A319-FDF390542843"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportaYa/Model/Services/NetworkManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "fetchLeagues(sport:complition:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "58F65095-E586-4723-A319-FDF390542843 - fa8cf1f7388b3025"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in SportaYa.Fetch.fetchLeagues(sport: Swift.String, complition: (Swift.Result&lt;SportaYa.Leagues, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SportaYa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a7medfekry/Desktop/iOS%20Swift/SportaYa/SportaYa/Model/Services/NetworkManger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "250">
+               </Location>
+               <Location
+                  uuid = "58F65095-E586-4723-A319-FDF390542843 - fa8cf1f7388b3025"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in SportaYa.Fetch.fetchLeagues(sport: Swift.String, complition: (Swift.Result&lt;SportaYa.Leagues, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SportaYa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a7medfekry/Desktop/iOS%20Swift/SportaYa/SportaYa/Model/Services/NetworkManger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "268">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

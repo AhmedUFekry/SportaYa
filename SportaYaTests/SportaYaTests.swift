@@ -10,27 +10,110 @@ import XCTest
 
 final class SportaYaTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    var fetchInstance: Fetch!
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+       override func setUpWithError() throws {
+           fetchInstance = Fetch()
+       }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+       override func tearDownWithError() throws {
+           fetchInstance = nil
+       }
+       
+       func testFetchLeagues() {
+           let expectation = XCTestExpectation(description: "Fetch Leagues")
+           
+           fetchInstance.fetchLeagues(sport: "football") { result in
+               switch result {
+               case .success(let leagues):
+                   XCTAssertTrue(((leagues.result?.isEmpty) != nil), "Leagues should not be empty")
+               case .failure(let error):
+                   XCTFail("Failed to fetch leagues with error: \(error.localizedDescription)")
+               }
+               expectation.fulfill()
+           }
+           
+           wait(for: [expectation], timeout: 20.0)
+       }
+       
+       func testFetchTennisPlayers() {
+           let expectation = XCTestExpectation(description: "Fetch Tennis Players")
+           
+           fetchInstance.fetchTennisPlayers(sport: "tennis") { result in
+               switch result {
+               case .success(let players):
+                   XCTAssertTrue(((players.result?.isEmpty) != nil), "Players should not be empty")
+               case .failure(let error):
+                   XCTFail("Failed to fetch tennis players with error: \(error.localizedDescription)")
+               }
+               expectation.fulfill()
+           }
+           
+           wait(for: [expectation], timeout: 10.0)
+       }
+       
+    func testFetchTennisFixtures() {
+        let expectation = XCTestExpectation(description: "Fetch Tennis Fixtures")
+        
+        fetchInstance.fetchTennisFixtures(sport: "tennis") { result in
+            switch result {
+            case .success(let fixtures):
+                XCTAssertTrue(((fixtures.result?.isEmpty) != nil), "Fixtures should not be empty")
+            case .failure(let error):
+                XCTFail("Failed to fetch tennis fixtures with error: \(error.localizedDescription)")
+            }
+            expectation.fulfill()
         }
+        
+        wait(for: [expectation], timeout: 10.0)
     }
 
+    func testFetchTeams() {
+        let expectation = XCTestExpectation(description: "Fetch Teams")
+        
+        fetchInstance.fetchTeams(sport: "football", leagueId: 1) { result in
+            switch result {
+            case .success(let teams):
+                XCTAssertTrue(((teams.result?.isEmpty) != nil), "Teams should not be empty")
+            case .failure(let error):
+                XCTFail("Failed to fetch teams with error: \(error.localizedDescription)")
+            }
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 10.0)
+    }
+
+    func testFetchLeagueFixtures() {
+        let expectation = XCTestExpectation(description: "Fetch League Fixtures")
+        
+        fetchInstance.fetchLeagueFixtures(leagueID: 1, sport: "football") { result in
+            switch result {
+            case .success(let fixtures):
+                XCTAssertFalse(((fixtures.result?.isEmpty) != nil), "League fixtures should not be empty")
+            case .failure(let error):
+                XCTFail("Failed to fetch league fixtures with error: \(error.localizedDescription)")
+            }
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 10.0)
+    }
+
+    func testFetchLeagueStandings() {
+        let expectation = XCTestExpectation(description: "Fetch League Standings")
+        
+        fetchInstance.fetchLeagueStandings(leagueID: 1, sport: "football") { result in
+            switch result {
+            case .success(let standings):
+                XCTAssertFalse(((standings.result?.isEmpty) != nil), "League standings should not be empty")
+            case .failure(let error):
+                XCTFail("Failed to fetch league standings with error: \(error.localizedDescription)")
+            }
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
 }

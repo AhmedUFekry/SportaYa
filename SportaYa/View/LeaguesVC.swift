@@ -12,23 +12,28 @@ import SkeletonView
 import Reachability
 
 
-class LeaguesVC: UIViewController {
+class LeaguesVC: UIViewController , LeaguesProtocol {
     
     
  
     @IBOutlet weak var imgPlaceHolder: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var namesSearchBar: UISearchBar!
-    var coreData = CoreData.coreDataObj
+    var presenter : LeaguesPresenter!
+
+    //var coreData = CoreData.coreDataObj
     var PlayersDetails:[player] = []
     let dummyItems = Items(league_name: "Test", league_key: 0)
     var sport = ""
     var leagues:Leagues?
     var filteredLeagues:Leagues?
-    let fLeagus = Fetch()
+   // let fLeagus = Fetch()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = LeaguesPresenter()
+        presenter.attachView(view: self)
+        presenter.sport = sport
         self.title = "Leagues"
         self.navigationController?.navigationBar.prefersLargeTitles = false
         checkConnection()
@@ -51,7 +56,7 @@ class LeaguesVC: UIViewController {
         let reachability = try! Reachability()
         
         if reachability.connection != .unavailable {
-            fetchLeagues()
+            presenter.fetchLeagues()
         } else {
             self.tableView.isHidden = true
             self.imgPlaceHolder.image = UIImage(named: "no_internet")
@@ -60,16 +65,16 @@ class LeaguesVC: UIViewController {
     
     
     
-    func fetchLeagues(){
-        fLeagus.fetchLeagues(sport: sport) { [weak self] result in
-            guard let self = self else {return}
-            switch result{
-            case .success(let leagues):
-                self.leagues = leagues
-                self.filteredLeagues = leagues
-                self.tableView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
-            case .failure(let error):
-                print(error)
+    func fetchLeagues(result: Int){
+       // fLeagus.fetchLeagues(sport: sport) { [weak self] result in
+           // guard let self = self else {return}
+        if result == 1{
+            
+            self.leagues = presenter.leagues
+            self.filteredLeagues = presenter.leagues
+            self.tableView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
+        }else{
+                //print(error)
                 self.tableView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
                 self.tableView.isHidden = true
                 self.imgPlaceHolder.image = UIImage(named: "no_internet")
@@ -77,7 +82,7 @@ class LeaguesVC: UIViewController {
 
                 
             }
-        }
+      //  }
     }
     
 }
@@ -124,7 +129,7 @@ extension LeaguesVC: UITableViewDelegate,SkeletonTableViewDataSource{
             cell.imageV.kf.setImage(with: url, placeholder:UIImage(named: "4"))
         }
         // save favourite button state
-        let favLeagues = coreData.fetchTeams()
+        let favLeagues = presenter.coreData.fetchTeams()
         if favLeagues.count == 0 {
             cell.addLeagueToFavbtn.isSelected = false
             cell.addLeagueToFavbtn.setImage(UIImage(systemName: "heart"), for: .normal)
@@ -151,11 +156,11 @@ extension LeaguesVC: UITableViewDelegate,SkeletonTableViewDataSource{
                 
                 cell.addLeagueToFavbtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
                 
-                coreData.save(sportName: result[indexPath.row].league_name, leagueID: result[indexPath.row].league_key, teamName: result[indexPath.row].league_name, teamLogo: result[indexPath.row].league_logo ?? "LPlace", players: PlayersDetails)
+                presenter.coreData.save(sportName: result[indexPath.row].league_name, leagueID: result[indexPath.row].league_key, teamName: result[indexPath.row].league_name, teamLogo: result[indexPath.row].league_logo ?? "LPlace", players: PlayersDetails)
                     
             } else {
                 cell.addLeagueToFavbtn.setImage(UIImage(systemName: "heart"), for: .normal)
-                coreData.del(sportName: result[indexPath.row].league_name, leagueID: result[indexPath.row].league_key, teamName: result[indexPath.row].league_name)
+                presenter.coreData.del(sportName: result[indexPath.row].league_name, leagueID: result[indexPath.row].league_key, teamName: result[indexPath.row].league_name)
                 
             }
             
